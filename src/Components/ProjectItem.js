@@ -4,7 +4,8 @@ class ProjectItem extends Component {
 
     deleteProject(id){
         console.log('test');
-        this.props.onDeleted()
+        console.log('the id is ', id);
+        this.props.onDeleted(id);
     }
 
   render() {
