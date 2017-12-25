@@ -7,6 +7,8 @@ import {Button} from 'react-bootstrap';
 import uuid from 'uuid';
 import $ from 'jquery';
 import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import HomePage from './Components/HomePage';
 
 class App extends Component {
   constructor() {
@@ -100,6 +102,12 @@ handleDeleteProject(id){
 render() {
   return (
     <div className="App">
+      <BrowserRouter>
+        <div>
+          <Route path='/home' component={HomePage}/>
+        </div>
+      </BrowserRouter>
+      
       <NavBar />
       <Button bsStyle='success'>Hello</Button>
       <AddProject addProject={this.handleAddProject.bind(this)} />
